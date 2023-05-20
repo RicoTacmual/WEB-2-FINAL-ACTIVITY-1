@@ -182,11 +182,13 @@
         var address = document.getElementById("address");
 
         var upbtn = document.getElementById("numid");
-
-                    if (ops=="delete"){
+                    if (numid.value =="")
+                    {
+                        alert("please input the id to search box to delete the record!");
+                    }
+                    else if (ops=="delete"){
                         alert("Record has been removed."); 
                         remove(ref(db, 'users/' + numid.value)); 
-                        
                     }
 
                     if (ops=="update"){
